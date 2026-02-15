@@ -38,8 +38,8 @@ class Encapsulation{
         System.out.println("Name update");
     }
 
-    void getName(){
-        System.out.println("Name of Student is " + name);
+    String getName(){
+        return name;
     }
 
     Boolean isPassed(){
@@ -69,8 +69,7 @@ public class Main{
         Encapsulation en = new Encapsulation();
         en.setName("Pinky");
         en.setMarks(20);
-
-        en.getName();
+        System.out.println(en.getName());
         Boolean isPassed = en.isPassed();
         System.out.println("Student Passed " + isPassed);
         sc.close();
