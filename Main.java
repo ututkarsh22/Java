@@ -61,14 +61,14 @@ import java.util.Scanner;
 
 class Vehicle{
     void start(){
-        System.out.println("Car is Starting ");
+        System.out.println("Vehicle is Starting in 3 2 1 ... ");
     }
 }
 
-class car extends Vehicle{
+class Car extends Vehicle{
     private String carName;
 
-    void setCarName(String carName){
+    public void setCarName(String carName){
         this.carName = carName; 
     }
 
@@ -106,8 +106,9 @@ public class Main{
         // System.out.println(en.getName());
         // Boolean isPassed = en.isPassed();
         // System.out.println("Student Passed " + isPassed);
+        
         String carName = sc.nextLine();
-        car c = new car();
+        Car c = new Car();
         c.setCarName(carName);
         c.start();
         c.display();
