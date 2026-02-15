@@ -17,46 +17,66 @@ import java.util.Scanner;
 //     }
 // }
 
-class Encapsulation{
+// class Encapsulation{
 
-    private String name;
-    private int marks;
+//     private String name;
+//     private int marks;
 
-    Encapsulation(){
-        System.out.println("Working constructor");
+//     Encapsulation(){
+//         System.out.println("Working constructor");
 
+//     }
+
+//     boolean setMarks(int marks)
+//     {
+//         if(marks < 0 || marks > 100)
+//         {
+//             return false;
+//         }
+//         else{
+//             this.marks = marks;
+//             System.out.println("marks updated");
+//             return true;
+//         }
+//     }
+//     void setName(String name)
+//     {
+//         this.name = name;
+//         System.out.println("Name update");
+//     }
+
+//     String getName(){
+//         return name;
+//     }
+
+//     boolean isPassed(){
+//         if(marks >= 33)
+//         {
+//             return true;
+//         }
+//         else
+//             return false;
+//     }
+// }
+
+class Vehicle{
+    void start(){
+        System.out.println("Car is Starting ");
+    }
+}
+
+class car extends Vehicle{
+    private String carName;
+
+    void setCarName(String carName){
+        this.carName = carName; 
     }
 
-    boolean setMarks(int marks)
+    void display()
     {
-        if(marks < 0 || marks > 100)
-        {
-            return false;
-        }
-        else{
-            this.marks = marks;
-            System.out.println("marks updated");
-            return true;
-        }
-    }
-    void setName(String name)
-    {
-        this.name = name;
-        System.out.println("Name update");
+        System.out.println(carName + " is ready to drive");
     }
 
-    String getName(){
-        return name;
-    }
-
-    boolean isPassed(){
-        if(marks >= 33)
-        {
-            return true;
-        }
-        else
-            return false;
-    }
 }
 
 public class Main{
@@ -64,7 +84,7 @@ public class Main{
     {
         System.out.println("Hello bussy");
         Scanner sc = new Scanner(System.in);
-        int marks = sc.nextInt();
+        // int marks = sc.nextInt();
         // String name = sc.nextLine();
         // String className = sc.nextLine();
         
@@ -74,18 +94,23 @@ public class Main{
         // Constructor st = new Constructor("Bruclee" , "BTech Cse");
         // st.details();
         
-        Encapsulation en = new Encapsulation();
-        en.setName("Pinky");
-        boolean right = en.setMarks(marks);
-        if(!right)
-            {
-                System.out.println("Marks are invalid");
-                sc.close();
-                return ; 
-        }
-        System.out.println(en.getName());
-        Boolean isPassed = en.isPassed();
-        System.out.println("Student Passed " + isPassed);
+        // Encapsulation en = new Encapsulation();
+        // en.setName("Pinky");
+        // boolean right = en.setMarks(marks);
+        // if(!right)
+        //     {
+        //         System.out.println("Marks are invalid");
+        //         sc.close();
+        //         return ; 
+        // }
+        // System.out.println(en.getName());
+        // Boolean isPassed = en.isPassed();
+        // System.out.println("Student Passed " + isPassed);
+        String carName = sc.nextLine();
+        car c = new car();
+        c.setCarName(carName);
+        c.start();
+        c.display();
         sc.close();
     }
 }
