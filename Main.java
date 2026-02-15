@@ -27,10 +27,17 @@ class Encapsulation{
 
     }
 
-    void setMarks(int marks)
+    boolean setMarks(int marks)
     {
-        this.marks = marks;
-        System.out.println("marks updated");
+        if(marks < 0 || marks > 100)
+        {
+            return false;
+        }
+        else{
+            this.marks = marks;
+            System.out.println("marks updated");
+            return true;
+        }
     }
     void setName(String name)
     {
@@ -42,7 +49,7 @@ class Encapsulation{
         return name;
     }
 
-    Boolean isPassed(){
+    boolean isPassed(){
         if(marks >= 33)
         {
             return true;
@@ -57,18 +64,25 @@ public class Main{
     {
         System.out.println("Hello bussy");
         Scanner sc = new Scanner(System.in);
+        int marks = sc.nextInt();
         // String name = sc.nextLine();
         // String className = sc.nextLine();
-
+        
         // System.out.println("outside name " + name);
         // System.out.println("outside classname " + className);
         
         // Constructor st = new Constructor("Bruclee" , "BTech Cse");
         // st.details();
-
+        
         Encapsulation en = new Encapsulation();
         en.setName("Pinky");
-        en.setMarks(20);
+        boolean right = en.setMarks(marks);
+        if(!right)
+            {
+                System.out.println("Marks are invalid");
+                sc.close();
+                return ; 
+        }
         System.out.println(en.getName());
         Boolean isPassed = en.isPassed();
         System.out.println("Student Passed " + isPassed);
