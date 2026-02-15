@@ -55,10 +55,10 @@ public class Poly {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
-        Animal d = new Dog();
-        d.sound();
-        Animal c = new Cat();
-        c.sound();
+        // Animal d = new Dog();
+        // d.sound();
+        // Animal c = new Cat();
+        // c.sound();
 
         String paymentType = sc.nextLine();
         String payment = debug(paymentType);
