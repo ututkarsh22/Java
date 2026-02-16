@@ -2,6 +2,9 @@ import java.util.*;
 
 interface Camera{
     void click();
+    static void defa(){
+        System.out.println("this is a static function");
+    }
 }
 interface Music{
     void play();
@@ -37,12 +40,17 @@ class InterFace{
             Phone p = new Phone();
             p.play();
             p.click();
+            // p.defa();//it will not work as it is the static function
+            Camera.defa();
         }
         else if(choice.equals("dslr"))
         {
             DSLR d = new DSLR();
             d.play();
             d.click();
+            // d.defa();//not work
+            // Music.defa();is also not work because music didnt have any function like defa;
+            Camera.defa();
         }
         else{
             System.out.println("Please choice something specific in Phone and Camera");

@@ -59,6 +59,8 @@ import java.util.Scanner;
 //     }
 // }
 
+
+//inheritance
 class Vehicle{
     void start(){
         System.out.println("Vehicle is Starting in 3 2 1 ... ");
